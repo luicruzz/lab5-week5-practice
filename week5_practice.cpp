@@ -51,18 +51,18 @@ public:
 };
 
 // Part D will go here later
-template <class T>
-T largerValue(const T &value1, const T &value2)
-{
-    if (value1 > value2)
+    template <class T>
+    T largerValue(const T &value1, const T &value2)
     {
-        return value1;
-    }
-    else
-    {
+        if (value1 > value2)
+        {
+            return value1;
+        }
+        else
+        {
         return value2;
+        }
     }
-}
 
 int main()
 {
@@ -72,6 +72,26 @@ int main()
     openEvent.printDetails();
 
     // Part E will go here later
+    LimitedEvent limitedEvent("Robotics Workshop", 18);
 
+    CampusEvent *event1 = &openEvent;
+    CampusEvent *event2 = &limitedEvent;
+
+    cout << "--- Polymorphism ---" << endl;
+    event1->printDetails();
+    event2->printDetails();
+
+    int attendance1 = 45;
+    int attendance2 = 80;
+
+    double rating1 = 4.2;
+    double rating2 = 4.7;
+
+    cout << "--- Function template ---" << endl;
+    cout << "Higher attendance estimate: "
+     << largerValue(attendance1, attendance2) << endl;
+
+    cout << "Higher event rating: "
+     << largerValue(rating1, rating2) << endl;
     return 0;
 }
