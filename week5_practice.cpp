@@ -3,7 +3,7 @@
  * Name: Luis D. Cruz Medina
  * Lab: Lab 5 - Week 5 Practice: OOP and Function Templates
  * Description: Inheritance, polymorphism, and function template practice
- * Due date: [Date]
+ * Due date: [9/22/2026]
  */
 
 #include <iostream>
@@ -51,6 +51,18 @@ public:
 };
 
 // Part D will go here later
+template <class T>
+T largerValue(const T &value1, const T &value2)
+{
+    if (value1 > value2)
+    {
+        return value1;
+    }
+    else
+    {
+        return value2;
+    }
+}
 
 int main()
 {
