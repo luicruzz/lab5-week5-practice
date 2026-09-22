@@ -1,0 +1,16 @@
+# Ejecutables compilados (Windows)
+*.exe
+
+# Ejecutables compilados (Mac/Linux) - sin extensión.
+# Lista aquí el nombre de cada ejecutable que generes en este lab:
+direcciones
+swap_demo
+memoria_dinamica
+bug_returning
+smart_pointer
+array_pointer
+# Archivos objeto intermedios (si tu compilador los genera)
+*.o
+
+# Carpeta de configuración del editor (opcional, común excluirla)
+.vscode/
